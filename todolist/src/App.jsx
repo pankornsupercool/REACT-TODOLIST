@@ -26,7 +26,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container App">
         <div className="jumbotron jumbotron-fluid py-2 jumbotron-align">
           <div className="container">
             <h1 className="display-1">Todo App</h1>
@@ -52,7 +52,7 @@ class App extends Component {
               <div className="card-body" key={index}>
                   <h5 className="card-title"> Task : {index+1}</h5>
                   <p className="card-text">{items}</p>
-                  <button className="btn btn-block btn-outline-danger Shadow-Black" onClick={event => this.deleteTodoTask(event,index)}>Delete</button>
+                  <button className="btn btn-block btn-outline-dark Shadow-Black" onClick={event => this.deleteTodoTask(event,index)} style={{fontWeight:"bold"}}>Done</button>
               </div>
             </div>
           })}

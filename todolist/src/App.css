@@ -1,5 +1,8 @@
 .App {
-  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  background-color: azure;
 }
 
 .App-logo {
@@ -56,4 +59,8 @@
 }
 .card-margin{
   margin: 10px;
+}
+
+.btn-outline-dark {
+  background-color:darkgray;
 }
