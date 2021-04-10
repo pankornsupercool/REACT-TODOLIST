@@ -1,10 +1,26 @@
 import './App.css';
-import  React from 'react';
+import React, { Component } from 'react';
+
 class App extends Component {
 
-  state ={
-    todoList:[]
+
+  state = {
+    todoList: []
   }
+
+  handleSubmit = (event) => {
+    var taskDesc = this.event.target.element.todoTask.value;
+    if (taskDesc.length > 0) {
+      this.setState({
+        todoList: [...this.state.todoList, taskDesc]
+      })
+      this.event.target.reset();
+    }
+    this.event.preventDefault();
+  }
+
+
+
 
   render() {
     return (
@@ -15,7 +31,9 @@ class App extends Component {
           </div>
         </div>
 
-        <form onsubmit={handleSubmit} >
+        <form onSubmit={
+          this.handleSubmit
+        }>
           <div className="input-group mb-3">
             <div className="input-group-prepend">
               <span class="input-group-text" id="basic-addon1">🧑‍</span>
@@ -26,21 +44,15 @@ class App extends Component {
             </div>
           </div>
         </form>
-
+        <ul className="list-group">
+          {this.state.todoList.map((items, index) => {
+            return <li className="list-group-item" key={index}>items</li>
+          })}
+        </ul>
       </div>
     );
   }
 }
 
-handleSubmit = (event) => {
-  var taskDesc = event.target.element.todoTask.value;
-  if (taskDesc.length > 0) {
-    this.setState({
-      todoList:[...this.state.todoList, taskDesc]
-    })
-    event.target.reset();
-  }
-  event.preventDefault();
 
-}
 export default App;
