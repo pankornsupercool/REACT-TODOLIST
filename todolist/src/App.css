@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+.Shadow-Black{
+  /* box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.829); */
+  border-radius: 1px;
+}
+
+.Shadow-Blue{
+  box-shadow: 0 0 4px 0 rgba(15, 12, 218, 0.829);
+}
+
+.jumbotron-align {
+  text-align: center;
+}
+
+.list-group-item{
+  padding:5px;
+  width: 400px;
+}
+.card-margin{
+  margin: 10px;
+}
